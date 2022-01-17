@@ -40,7 +40,7 @@
               </a>
             </li>
             <li class="nav-item nav-logout d-none d-lg-block">
-              <a class="nav-link" href="{{url('login')}}">
+              <a class="nav-link" href="{{url('elogin')}}">
                 <i class="mdi mdi-power"></i>
               </a>
             </li>

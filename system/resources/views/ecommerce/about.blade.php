@@ -79,7 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  <a href="cart.html"><img href="cart.html" src="{{url('public')}}/images/cart.png" alt=""/>(0)</a></div>
 				  <ul>
 					 <li><a href="registration.html">REGISTRATION</a> <span>/<span> &nbsp;</li>
-					 <li><a href="{{url('login')}}"> LOGIN</a></li>
+					 <li><a href="{{url('elogin')}}"> LOGIN</a></li>
 				 </ul>			 
 			 </div>
 		 </div>

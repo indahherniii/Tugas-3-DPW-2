@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\productController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,35 +69,16 @@ Route::get('/cart', function () {
 
 
 // template admin
-Route::get('/base', function () {
-    return view('section.base');
-});
+Route::get('/section.base', [homeController::class, 'showbase']);
+Route::get('/dashboard', [homeController::class, 'showdashboard']);
+Route::get('/login', [AuthController::class, 'showlogin']);
+Route::get('/categories', [homeController::class, 'showcategories']);
+Route::get('/user', [homeController::class, 'showuser']);
+Route::get('/profile', [homeController::class, 'showprofile']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-Route::get('/categories', function () {
-    return view('categories');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/product', function () {
-    return view('product');
-});
-
-Route::get('/user', function () {
-    return view('user');
-});
-
-Route::get('/profile', function () {
-    return view('profile');
-});
-
-
+Route::get('/product', [productController::class, 'index']);
+Route::get('/product/create', [productController::class, 'create']);
+Route::post('/product', [productController::class, 'store']);
 
 
 
